@@ -9,6 +9,8 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["node"],
-  }
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules"]
 }
