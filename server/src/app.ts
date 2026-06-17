@@ -1,6 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 import documentsRouter from './routes/documents.js';
+import type { Request, Response } from 'express';
 import { env } from './config/env.js';
 
 const localDevOrigins = [/^http:\/\/localhost:\d+$/, /^http:\/\/127\.0\.0\.1:\d+$/];
@@ -15,7 +16,7 @@ app.use(
 );
 app.use(express.json({ limit: '2mb' }));
 
-app.get('/health', (_request, response) => {
+app.get('/', (_request: Request, response: Response) => {
   response.json({ ok: true });
 });
 
