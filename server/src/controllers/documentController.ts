@@ -1,5 +1,5 @@
 import type { NextFunction, Request, Response } from 'express';
-import { createDocument, getDocument, listDocuments, saveDocument } from '../services/documentStore';
+import { createDocument, getDocument, listDocuments, saveDocument } from '../services/documentStore.js';
 
 export async function listDocumentsHandler(_request: Request, response: Response, next: NextFunction): Promise<void> {
   try {

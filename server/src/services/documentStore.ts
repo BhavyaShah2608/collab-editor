@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
-import { DocumentModel } from '../models/Document';
-import { hasMongoConnection } from '../config/db';
-import type { DocumentPatch, DocumentRecord, DocumentSummary } from '../types';
+import { DocumentModel } from '../models/Document.js';
+import { hasMongoConnection } from '../config/db.js';
+import type { DocumentPatch, DocumentRecord, DocumentSummary } from '../types.js';
 
 const defaultContent = { type: 'doc', content: [{ type: 'paragraph' }] };
 const memoryStore = new Map<string, DocumentRecord>();
@@ -34,7 +34,7 @@ function mapMongoDocument(document: {
 export async function listDocuments(): Promise<DocumentSummary[]> {
   if (hasMongoConnection()) {
     const documents = await DocumentModel.find().sort({ updatedAt: -1 }).lean();
-    return documents.map((document) => ({
+    return documents.map((document: any) => ({
       _id: String(document._id),
       title: document.title,
       createdAt: new Date(document.createdAt),

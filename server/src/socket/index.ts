@@ -1,6 +1,6 @@
 import type { Server } from 'socket.io';
-import { saveDocument } from '../services/documentStore';
-import type { DocumentContent } from '../types';
+import { saveDocument } from '../services/documentStore.js';
+import type { DocumentContent } from '../types.js';
 
 type JoinPayload = {
   documentId: string;

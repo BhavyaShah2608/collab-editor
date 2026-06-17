@@ -1,5 +1,5 @@
 import mongoose, { type Model } from 'mongoose';
-import type { DocumentRecord } from '../types';
+import type { DocumentRecord } from '../types.js';
 
 type DocumentSchemaType = DocumentRecord;
 

@@ -4,7 +4,7 @@ import {
   getDocumentHandler,
   listDocumentsHandler,
   updateDocumentHandler
-} from '../controllers/documentController';
+} from '../controllers/documentController.js';
 
 const router = Router();
 
