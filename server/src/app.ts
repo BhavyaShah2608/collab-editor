@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express from 'express';
-import documentsRouter from './routes/documents';
-import { env } from './config/env';
+import documentsRouter from './routes/documents.js';
+import { env } from './config/env.js';
 
 const localDevOrigins = [/^http:\/\/localhost:\d+$/, /^http:\/\/127\.0\.0\.1:\d+$/];
 

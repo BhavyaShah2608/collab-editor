@@ -1,8 +1,8 @@
 import http from 'node:http';
-import app from './app';
-import { connectDatabase } from './config/db';
-import { env } from './config/env';
-import { registerSocketHandlers } from './socket';
+import app from './app.js';
+import { connectDatabase } from './config/db.js';
+import { env } from './config/env.js';
+import { registerSocketHandlers } from './socket/index.js';
 import { Server } from 'socket.io';
 
 const localDevOrigins = [/^http:\/\/localhost:\d+$/, /^http:\/\/127\.0\.0\.1:\d+$/];
